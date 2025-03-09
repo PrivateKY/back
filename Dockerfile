@@ -8,7 +8,7 @@ RUN corepack enable
 # install packages
 COPY package.json ./
 COPY pnpm-lock.yaml ./
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+RUN --mount=type=cache,id=s/48c55a7e-c3ae-4511-9ec9-4b032cc8c03e-pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 # build source
 COPY . ./
